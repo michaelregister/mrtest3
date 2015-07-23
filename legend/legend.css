@@ -1,0 +1,98 @@
+﻿.legenddiv {
+  background-color: #2c3e50;
+  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: -24px 11px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -24px 11px 5px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -24px 11px 5px -1px rgba(0, 0, 0, 0.75);
+}
+#legenddiv {
+  background-color: #2c3e50;
+  width: 300px;
+  border-radius: 10px;
+}
+.legendimg {
+  width: 133px;
+  height: 100px;
+  margin: 10px !important;
+}
+.header {
+  margin: 10px !important;
+  color: white;
+}
+.title {
+  margin: 10px !important;
+  color: cornflowerblue;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0);
+    -webkit-animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: perspective(400px) scale(1);
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+.flip {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: flip;
+  backface-visibility: visible !important;
+  animation-name: flip;
+}
+.removed-item {
+  animation: removed-item-animation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  /*transform origin is moved to the bottom left corner*/
+  transform-origin: 0% 100%;
+}
+@keyframes removed-item-animation {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(600px) rotateZ(90deg);
+  }
+}
+/*# sourceMappingURL=legend.css.map */
