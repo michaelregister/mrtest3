@@ -6,7 +6,7 @@ var app;
     var Legend = (function () {
         function Legend() {
             this.restrict = "E";
-            this.templateUrl = "/app/Features/legend/legend.html";
+            this.templateUrl = "~/../bower_components/mrtest3/legend/legend.html";
             this.controller = ["$scope", "leafletData", "$attrs", "$element", "$location", function ($scope, leafletData, $attrs, $element, $location) {
                 var options = { position: "bottomright" };
                 var mlegend = new L.Control(options);
@@ -52,6 +52,6 @@ var app;
         };
         return Legend;
     })();
-    angular.module("app").directive("legend", function () { return Legend.getInstance(); });
+    angular.module(NameSpace).directive("legend", function () { return Legend.getInstance(); });
 })(app || (app = {}));
 //# sourceMappingURL=legend.js.map

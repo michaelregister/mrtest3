@@ -25,7 +25,7 @@ module app {
         constructor() {
             console.log("Legend constructor");
         }
-        templateUrl: string = "/app/Features/legend/legend.html";
+        templateUrl: string = "~/../bower_components/mrtest3/legend/legend.html";
         controller = ["$scope", "leafletData", "$attrs", "$element", "$location",
             function ($scope: IlegendScope, leafletData: any, $attrs: IlegendAttributes, $element: any, $location: ng.ILocationService) {
             var options: any = { position: "bottomright" };
@@ -76,5 +76,5 @@ module app {
         }
     }
 
-    angular.module("app").directive("legend", () => Legend.getInstance());
+    angular.module(NameSpace).directive("legend", () => Legend.getInstance());
 }
