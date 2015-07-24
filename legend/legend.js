@@ -1,12 +1,12 @@
-/// <reference path="../../../scripts/typings/leaflet/leaflet.d.ts" />
-/// <reference path="../../../scripts/global.ts" />
+/// <reference path="../../scripts/typings/leaflet/leaflet.d.ts" />
+/// <reference path="../../scripts/global.ts" />
 var app;
 (function (app) {
     "use strict";
     var Legend = (function () {
         function Legend() {
             this.restrict = "E";
-            this.templateUrl = "~/../bower_components/mrtest3/legend/legend.html";
+            this.templateUrl = "lib/legend/legend.html";
             this.controller = ["$scope", "leafletData", "$attrs", "$element", "$location", function ($scope, leafletData, $attrs, $element, $location) {
                 var options = { position: "bottomright" };
                 var mlegend = new L.Control(options);
@@ -52,6 +52,6 @@ var app;
         };
         return Legend;
     })();
-    angular.module(NameSpace).directive("legend", function () { return Legend.getInstance(); });
+    angular.module('lba.Demographics').directive("legend", function () { return Legend.getInstance(); });
 })(app || (app = {}));
 //# sourceMappingURL=legend.js.map

@@ -1,0 +1,21 @@
+{
+  "name": "lba.legend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/michaelregister/mrtest3",
+  "authors": [
+    "michaelregister <michael@innovocative.com>"
+  ],
+  "description": "map legend",
+  "keywords": [
+    "map",
+    "lba"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
