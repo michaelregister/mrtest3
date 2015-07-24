@@ -1,5 +1,7 @@
 /// <reference path="../../scripts/typings/leaflet/leaflet.d.ts" />
 /// <reference path="../../scripts/global.ts" />
+angular.module("lib/legend/legend.html", []).run(["$templateCache", function (a) { a.put("lib/legend/legend.html", "<div id=legenddiv ng-show={{legendShow}}><h4 class=header><b>Demographic Legend</b></h4><h6 class=title><b>{{legendTitle}}</b></h6><img class=legendimg src={{legendURL}} alt=legend><h6><b>{{FiltersText}}</b></h6></div>") }]);
+
 var app;
 (function (app) {
     "use strict";
@@ -52,6 +54,6 @@ var app;
         };
         return Legend;
     })();
-    angular.module('lba.Demographics').directive("legend", function () { return Legend.getInstance(); });
+    angular.module('lba.legend').directive("legend", function () { return Legend.getInstance(); });
 })(app || (app = {}));
 //# sourceMappingURL=legend.js.map
