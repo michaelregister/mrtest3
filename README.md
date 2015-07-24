@@ -1,4 +1,4 @@
-#mrtest3 
+#lba.legend
 **This is intended to be used with the XDemographics module**
 
 To create the map legend add the following javascript into the controller that contains the map. 
